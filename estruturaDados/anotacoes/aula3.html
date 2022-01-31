@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anotações take blib</title>
+
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="../../script.js"></script>
+</head>
+<body>
+    <section>
+        <header>
+            <nav>
+                <div class="visivel-mobile">
+                    <a class="link" href="#">Anotações take blip</a>
+                    <div id="toggleNavbar" onclick=toggleNavbar()>
+                        <span class="stroke"></span>
+                        <span class="stroke"></span>
+                        <span class="stroke"></span>
+                    </div>
+                </div>
+                <div id="nav-link" class="hide">
+                    <a class="link" href="../../index.html">Home</a>
+                    <a class="link" href="#">Contato</a>
+                </div>
+            </nav>
+        </header>
+    </section>
+    
+    <section class="main-content">
+
+        <a class="backButton" href="../../index.html" class="href">home</a>
+        <a class="backButton" href="../index.html" class="href">voltar</a>
+
+        <div>
+            <h1>Registros</h1>
+            <h3>O que são registros</h3>
+            <p>
+                Registros são estruturas de dados, parecidos com vetores, no entanto conseguem 
+                armazenar vários tipos de variáveis. Eles contêm campos que especificam o tipo 
+                de informação armazenada, podem ser também chamados de chaves.
+            </p>
+            <p>
+                Cada estrutura de registro tem um nome, seus dados podem ser acessados por um 
+                ponto.
+            </p>
+            <pre><code>
+                Registro Livro = {Nome: frase, Lançamento: data, Tamanho: número}
+
+                Nome do livro == Livro.Nome
+            </code></pre>
+
+            <h3>Estrutura de um Registro</h3>
+            <pre><code>
+                <strong>Declaração</strong>
+
+                Registro = {
+	            ....campo: tipo de variável;
+                }
+
+                <strong>Atribuição</strong>
+
+                registro nome_variavel.campo = valor;
+
+            </code></pre>
+
+            <h3>Como são armazenados na memoria</h3>
+            <p>
+                Quando um Registro é declarado, o computador separa um bloco de memória para 
+                cada campo dele.
+            </p>
+            <p>
+                O tamanho do bloco de memória depende do tamanho que cada campo precisa para 
+                armazenar seu valor, quantos bytes o processador consegue ler ao mesmo tempo 
+                e ordem de declaração das variáveis.
+            </p>
+            <p>
+                O computador armazena variáveis de forma que ocupem o espaço de 1 ciclo da 
+                CPU, 1 ciclo é a quantidade de bytes que um processador consegue ler ao mesmo 
+                tempo. Por exemplo, um processador d 32bits lê 4 bytes ao mesmo tempo.
+            </p>
+            <p>
+                Caso uma variável diferente precise ser armazenada, mas o espaço de 1 ciclo 
+                não foi preenchi ainda, o computador colocará bytes vazios até que o ciclo seja 
+                preenchido. Dessa forma é possível otimizar a quantidade de ciclos necessária 
+                para executar um programa, aumentando a velocidade de execução.
+            </p>
+            <img class="ilustracao" src="../../static/storedStruct.jpeg" />
+            
+        </div>
+    </section>
+</body>
+</html>
