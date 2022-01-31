@@ -20,12 +20,12 @@ a {
 }
 
 h1, h3{
-    padding: 1em 0;
+    padding: 0.7em 0;
     width: 100%;
 }
 
 p, li {
-    line-height: 1.5em;
+    line-height: 1.7em;
     padding: 0.5em 0em;
     list-style-position: inside;
 }
@@ -48,7 +48,7 @@ nav {
 
 .link:hover {
     transition: 0.3s;
-    background-color: #353535;
+    background-color: #d66032;
 }
 
 .visivel-mobile {
@@ -69,7 +69,7 @@ nav {
     width: 95%;
     max-width: 800px;
     margin: 20px auto;
-    border-radius: 15px;
+    border-radius: 5px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     padding: 1em;
     background-color: #ffffff;
@@ -86,7 +86,7 @@ nav {
     height: 100%;
     background-color: #eeeeee;
     justify-self: center;
-    border-radius: 15px;
+    border-radius: 5px;
     overflow: hidden;
     transition: 0.3s;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -111,11 +111,12 @@ nav {
 .backButton {
     display: inline-block;
     width: fit-content;
-    padding: 1rem;
-    border-radius: 15px;
     margin: 0 0.5rem 1rem 0;
-    background-color: #dddddd;
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
     box-shadow: inset 0 10px 10px rgba(0, 0, 0, 0.3);
+    background-color: #dddddd;
+    color:black;
 }
 
 .backButton:hover  {
@@ -131,7 +132,7 @@ nav {
 
 @media only screen and (max-width: 600px) {
     body {
-        font-size: 20px;
+        font-size: 22px;
     }
 
     section header {
