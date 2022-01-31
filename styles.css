@@ -4,10 +4,10 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Quicksand", sans-serif, arial;
 }
 
 body {
+    font-family: "Quicksand", sans-serif, arial;
     font-size: 16px;
     color: #333;
     background-color: #dddddd;
@@ -37,6 +37,14 @@ header {
 nav {
     display: flex;
     justify-content: space-between;
+}
+
+pre {
+    padding: 0 1em 1em;
+    background-color: #eeeeee;
+    border: solid 1px #cccccc;
+    border-radius: 2px;
+    white-space: pre-line;
 }
 
 .link {

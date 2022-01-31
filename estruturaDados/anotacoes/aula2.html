@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anotações take blib</title>
+
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="../../script.js"></script>
+</head>
+<body>
+    <section>
+        <header>
+            <nav>
+                <div class="visivel-mobile">
+                    <a class="link" href="#">Anotações take blip</a>
+                    <div id="toggleNavbar" onclick=toggleNavbar()>
+                        <span class="stroke"></span>
+                        <span class="stroke"></span>
+                        <span class="stroke"></span>
+                    </div>
+                </div>
+                <div id="nav-link" class="hide">
+                    <a class="link" href="../../index.html">Home</a>
+                    <a class="link" href="#">Contato</a>
+                </div>
+            </nav>
+        </header>
+    </section>
+    
+    <section class="main-content">
+
+        <a class="backButton" href="../../index.html" class="href">home</a>
+        <a class="backButton" href="../index.html" class="href">voltar</a>
+
+        <div>
+            <h1>Vetores e matrizes</h1>
+            <h3>O que são vetores</h3>
+            <p>
+                Vetores são estruturas de dados simples, ele armazena diversas variáveis do 
+                mesmo tipo.
+            </p>
+            <p>
+                Para armazenar o vetor na memória, o computador primeiro separa um espaço da 
+                memória, em seguida atribui o valor de cada elemento para esse espaço, os 
+                valores são salvos consecutivamente e em ordem na memória.
+            </p>
+            <p>
+                Exemplo em Portugol:
+            </p>
+
+            <pre><code>
+                programa {
+                funcao inicio() {
+                        inteiro vetor[3] = {13, 45, 56}
+
+                //      Vetor tem 3 valores
+                //      Vetor[0] == 13
+                //      Vetor[1] == 45
+                //      Vetor[2] == 56
+
+                        escreva (vetor[2])
+                    }
+                }
+            </code></pre>
+
+            <h3>O que são matrizes</h3>
+            <p>
+                Matrizes são “vetores de vetores”, ou seja, quando existem vários vetores do 
+                mesmo tipo, podem ser armazenados em um vetor também.
+            </p>
+            <p>
+                O computado armazena cada valor de cada vetor e cada vetor consecutivamente, 
+                pois sua memória é linear.
+            </p>
+            <p>
+                Segue um exemplo em Portugal:
+            </p>
+
+            <pre><code>
+                programa {
+                    funcao inicio() {
+                        inteiro matriz[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}
+                        
+                // 		A matriz tem 3 vetores, e cada vetor tem 3 valores
+                //      Para referenciar um valor, primeiro é necessário referenciar o vetor
+                //	    Por exemplo, o número 6, ele está no segundo vetor, na terceira posição
+                
+                        escreva (matriz[1][2])
+                    }
+                }
+            </code></pre>
+
+            <p>
+                Algo interessante que achei quando fui pesquisar mais a fundo foi a forma 
+                que o computador usa para referenciar elementos.
+            </p>
+            <p>
+                Por exemplo, em uma Matriz de 100 arrays, cada um com 100 elementos, começando 
+                no número 1 e cada valor cresce 1 unidade até terminar no número 10 000, Como 
+                o computador encontraria o valor de Matriz[14][67]?
+            </p>
+            <pre><code>
+                Matriz[100][100] = {{1, 2, 3, ... 100}, {101. 102, ... 200}, ... {..., 10 000}}
+
+                Matriz[14][67] = ?
+            </code></pre>
+            <p>
+                Ele primeiro encontra o endereço do primeiro elemento, depois soma esse 
+                valor com a primeira coordenada, multiplicada pelo número de colunas, 
+                passando assim por todos os elementos das linhas anteriores, depois ele soma 
+                com a segunda coordenada.
+            </p>
+            <pre><code>
+                Matriz[0][0] + linha*(Qnt colunas) + coluna
+            </code></pre>
+            <p>Assim o valor de Matriz[14][67] é:</p>
+            <pre><code>
+                Matriz[0][0] + 14*100 + 67
+                1 + 1400 + 67
+                1468
+            </code></pre>
+
+        </div>
+    </section>
+</body>
+</html>
