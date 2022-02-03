@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anotações take blib</title>
+
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="shortcut icon" href="../../static/edit.png" type="image/png">
+    <!-- https://www.flaticon.com/free-icons/pencil" Pencil icons created by IconKanan - Flaticon-->
+    
+    <script src="../../script.js"></script>
+</head>
+<body>
+    <section>
+        <header>
+            <nav>
+                <div class="visivel-mobile">
+                    <div id="toggleNavbar" onclick=toggleNavbar()>
+                        <span class="stroke"></span>
+                        <span class="stroke"></span>
+                        <span class="stroke"></span>
+                    </div>
+                </div>
+                <div id="nav-link" class="hide">
+                    <a class="link" href="../../index.html">Início</a>
+                    <a class="link" href="https://web.dio.me/users/arthurresendefaria?tab=achievements">Arthur Resende</a>
+                </div>
+            </nav>
+        </header>
+    </section>
+    
+    <section class="main-content">
+
+        <a class="button" href="../../index.html" class="href">home</a>
+        <a class="button" href="../index.html" class="href">voltar</a>
+
+        <div>
+            <h1>Filas e Pilhas</h1>
+            <h3>O que são filas e pilhas?</h3>
+            <p>
+                Estrutura de coleção de dados que permitem acesso a apenas um elemento de cada 
+                vez. No entanto a formaque o elemento é acessado é diferente em cada uma.
+            </p>
+            <p>
+                Filas seguem um algoritmo FIFO (first in first out), onde o primeiro elemento 
+                adicionado é sempre o primeiro a ser acessado, já as pilhas utilizam o algorítmo 
+                LIFO (last in first out) onde o último elemento adicionado é sempre o primeiro a 
+                ser acessado.
+            </p>
+            <h3>Operações básicas em filas</h3>
+            <ul>
+                <li><strong>enQueue():</strong> adiciona 1 elemento na fila</li>
+                <li><strong>deQueue():</strong> remove 1 elemento da fila</li>
+                <li><strong>front():</strong> acessa primeiro elemento da fila</li>
+                <li><strong>rear():</strong> acessa último elemento da fila</li>
+            </ul>
+            <img class="ilustracao" src="../../static/operacoes-fila.jpg" />
+            <h3>Como filas são armazenadas na memória?</h3>
+            <p>
+                Normalmente utilizando listas, pois essas não tem limite de elementos.
+            </p>
+            <p>
+                Ocasionalmente utiliza-se arrays, nesse caso um algoritmo é usado para fazer o 
+                array ter índices circulares, infelizmente Portugol não tem os comandos para 
+                implementar o algoritmo de forma simples e didática, ele fica grande e complexo, 
+                <a href="https://www.geeksforgeeks.org/circular-queue-set-1-introduction-array-implementation/">
+                    ele pode ser verificado aqui
+                </a> caso tenha curiosidade.
+            </p>
+            <img class="ilustracao" src="../../static/fila-memoria.jpg" />
+            <p>
+                Em um array normal, ao encher a fila e retirar um elemento não é possível 
+                adicionar outro, pois a última posição já foi utilizada. Já em um array circular, 
+                ao encher a fila e retirar um elemento, é possível adicionar um elemento no 
+                início, tornando a adição e remoção de elementos cíclica.
+            </p>
+            <p>
+                Quando a lista está vazia, o índice do primeiro e último elemento é -1, assim 
+                ao adicionar um elemento o índice é calculado para 0.
+            </p>
+            <h3>Exemplos de aplicação</h3>
+            <ul>
+                <li>
+                    Ordenar dados enviados assincronicamente, vamos aprender sobre isso no 
+                    javascript futuramente nesse bootcamp :)
+                </li>
+                <li>Lista de emails</li>
+                <li>Filas em roteadores</li>
+            </ul>
+
+            <h3>Operações básicas com pilhas</h3>
+            <ul>
+                <li><strong>push():</strong> adiciona 1 elemento no final da pilha</li>
+                <li><strong>pop():</strong> remove 1 elemento do final da pilha</li>
+                <li><strong>peek():</strong> acessa o último elemento da pilha</li>
+                <li><strong>isEmpty():</strong> verifica se a pilha está vazia</li>
+            </ul>
+            <img class="ilustracao" src="../../static/operacoes-pilha.jpg" />
+            <h3>Como pilhas são armazenadas na memória</h3>
+            <p>
+                Novamente utilizando listas, pois essas não tem limite de elementos. Podem ser 
+                implementadas usando Arrays também, nesse caso o algoritmo para tornar Array 
+                circular não é necessário.
+            </p>
+            <h3>Exemplos onde pilhas são utilizadas</h3>
+            <ul>
+                <li>“Ctrl + z”</li>
+                <li>Desfazer e refazer ações em programas</li>
+                <li>Voltar página em navegadores</li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>
